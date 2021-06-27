@@ -4,26 +4,26 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void InsertionSort(vector<int> &a) {
-    int N = a.size();
+void insertionSort(vector<int> &A, int N) {
     for (int i = 1; i < N; ++i) {
-        int v = a[i];
+        int v = A[i];
         int j = i;  // vを挿入する場所j
         for (; j > 0; --j) {
-            if (a[j - 1] > v) {
-                a[j] = a[j - 1];
-            } else break;
+            if (A[j - 1] > v)
+                A[j] = A[j - 1];
+            else
+                break;
         }
-        a[j] = v;
+        A[j] = v;
     }
 }
 
 int main() {
     int N;
     cin >> N;
-    vector<int> a(N);
-    for (int i = 0; i < N; ++i) cin >> a[i];
-    InsertionSort(a);
-    for (int i = 0; i < N; ++i) cout << a[i] << " ";
+    vector<int> A(N);
+    for (int i = 0; i < N; ++i) cin >> A[i];
+    insertionSort(A, N);
+    for (int i = 0; i < N; ++i) cout << A[i] << " ";
     cout << endl;
 }
