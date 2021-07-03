@@ -6,6 +6,7 @@
 - Selection Sort
 - Heap Sort
 - Shell Sort
+- Introsort
 
 ## Data Structures
 - Stack
